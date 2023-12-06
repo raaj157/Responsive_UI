@@ -1,0 +1,69 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  --light: #aee7c9; /* Light color */
+  --dark: black; /* Dark color */
+  --link: #ff5e5b; /* Link color */
+  --link-hover: #d9413b; /* Link color on hover */
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 3px solid var(--dark);
+  overflow: hidden;
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, var(--link), var(--link-hover));
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  transform: translateX(50%);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--dark);
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  transform: translateX(100%);
+}
+
+.switch-label:hover .slider::before {
+  background-color: var(--light);
+}
+
+.switch-label:hover .slider {
+  background-image: linear-gradient(to right, var(--link-hover), var(--link));
+}
