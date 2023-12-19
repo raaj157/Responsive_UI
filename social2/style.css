@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(280deg, #1e90ff, rgba(255, 255, 255, 0));
+  text-align: center;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+  margin: 10px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+ul li i.bxl-facebook-circle:hover {
+  color: #3b5998;
+}
+
+ul li i.bxl-twitter:hover {
+  color: #1da1f2;
+}
+
+ul li i.bxl-instagram:hover {
+  color: #e4405f;
+}
+
+ul li i.bxl-whatsapp:hover {
+  color: #25d366;
+}
+
+ul li i.bxl-youtube:hover {
+  color: #ff0000;
+}
