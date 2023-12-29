@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header-1</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">WiseCrest</a>
+
+      <ul class="navbar">
+        <li><a href="#" class="nav-active">WiseCrest</a></li>
+        <li><a href="#">WiseCrest</a></li>
+        <li><a href="#">WiseCrest</a></li>
+        <li><a href="#">WiseCrest</a></li>
+      </ul>
+
+      <div class="main">
+        <a href="#" class="user"><i class="bx bx-user"></i>Sign In / Log In</a>
+        <div class="bx bx-menu" id="menu"></div>
+      </div>
+    </header>
+
+    <script>
+      let menu = document.querySelector("#menu");
+      let navbar = document.querySelector(".navbar");
+
+      menu.onclick = () => {
+        manu.classList.toggle("bx-x");
+        navbar.classList.toggle("open");
+      };
+    </script>
+  </body>
+</html>

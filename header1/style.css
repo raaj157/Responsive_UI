@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  background: #008080;
+  color: black;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 20px;
+  transition: all 0.5s ease;
+}
+
+.logo {
+  color: black;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.logo:hover {
+  color: #fff44f;
+}
+
+.navbar {
+  display: flex;
+}
+.navbar a {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 5px 0;
+  margin: 0px 30px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #fff44f;
+}
+.navbar a.nav-active {
+  color: #fff44f;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+}
+
+.main a {
+  margin-right: 25px;
+  margin-left: 10px;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+.user i {
+  color: #fff44f;
+  font-size: 28px;
+  margin-right: 7px;
+}
+
+.main a:hover {
+  color: #fff44f;
+}
+
+#menu {
+  font-size: 32px;
+  color: black;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  header {
+    padding: 14px 2%;
+    transition: 0.2s;
+  }
+  navbar a {
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+}
+
+@media (max-width: 1090px) {
+  #menu {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 270px;
+    height: 29vh;
+    background: #fff44f;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+  }
+  .navbar a {
+    display: block;
+    margin: 12px 0;
+    padding: 0px 25px;
+    transition: all 0.5s ease;
+  }
+
+  .navbar a:hover {
+    color: #fff44f;
+    transform: translateY(5px);
+  }
+  .navbar a.nav-active {
+    color: black;
+  }
+  .navbar .open {
+    right: 2%;
+  }
+}
