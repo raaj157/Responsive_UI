@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #3a4446;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+@keyframes rgb-border {
+  0% {
+    border-color: rgba(0, 255, 255, 1); /* Bright Cyan */
+  }
+  33% {
+    border-color: rgb(19, 177, 189); /* Bright Green */
+  }
+  66% {
+    border-color: rgba(255, 0, 255, 1); /* Bright Magenta */
+  }
+  100% {
+    border-color: rgba(0, 255, 255, 1); /* Bright Cyan */
+  }
+}
+
+.main {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 3px solid transparent; /* Increase border size here */
+  width: 350px;
+  text-align: center;
+  transition: border 0.5s ease;
+}
+
+.main:hover {
+  animation: rgb-border 3s infinite;
+  border-width: 6px; /* Increase border size on hover */
+}
+
+.main h1 {
+  margin-bottom: 30px;
+  color: #00796b;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  color: #00796b;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin: 8px 0 15px;
+  border: 1px solid #00796b;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.wrap {
+  margin: 20px 0;
+}
+
+.wrap button {
+  background-color: #00796b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+}
+
+.wrap button:hover {
+  background-color: #004d40;
+}
+
+p {
+  margin-top: 20px;
+  color: #00796b;
+}
+
+p a {
+  color: #004d40;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
