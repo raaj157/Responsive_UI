@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0e0e0e;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.glow-button {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.glow-button:hover {
+    color: blue;
+    border-color: #fff;
+}
+
+.glow-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #ff0057, #00ff87, #0059ff, #ff00b7);
+    background-size: 400%;
+    border-radius: 50px;
+    z-index: -1;
+    animation: animateGlow 8s linear infinite;
+}
+
+.glow-button::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #0e0e0e;
+    border-radius: 50px;
+    z-index: -1;
+}
+
+@keyframes animateGlow {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
