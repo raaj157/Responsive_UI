@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+  font-family: "Arial", sans-serif;
+}
+
+.neon-container {
+  text-align: center;
+  perspective: 1000px;
+}
+
+.neon-text {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 5px;
+  position: relative;
+  animation: flicker 2.5s infinite;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff,
+    0 0 80px #0ff, 0 0 100px #0ff;
+  transform: rotateY(10deg);
+}
+
+/* Flicker effect using keyframes */
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff,
+      0 0 80px #0ff, 0 0 100px #0ff;
+  }
+  5% {
+    opacity: 0.8;
+    text-shadow: none;
+  }
+  15% {
+    opacity: 1;
+    text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 20px #ff0, 0 0 40px #ff0,
+      0 0 80px #ff0, 0 0 100px #ff0;
+  }
+  30% {
+    opacity: 0.9;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 30px #0ff, 0 0 60px #0ff,
+      0 0 100px #0ff;
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 5px #f0f, 0 0 10px #f0f, 0 0 20px #f0f, 0 0 40px #f0f,
+      0 0 80px #f0f, 0 0 100px #f0f;
+  }
+  75% {
+    opacity: 0.95;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff,
+      0 0 40px #ff00ff, 0 0 80px #ff00ff, 0 0 100px #ff00ff;
+  }
+  85% {
+    opacity: 1;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff,
+      0 0 80px #0ff, 0 0 100px #0ff;
+  }
+}
+
+@media (max-width: 768px) {
+  .neon-text {
+    font-size: 4rem;
+  }
+}
