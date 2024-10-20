@@ -1,125 +1,124 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background: linear-gradient(45deg, #ff416c, #ff4b2b, #1e90ff);
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .social-container {
-    display: flex;
-    gap: 30px;
-  }
-  
-  .social-link {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: #141e30;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2rem;
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    text-decoration: none;
-  }
-  
-  .social-link:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 50px rgba(255, 255, 255, 0.8);
-  }
-  
-  .social-link:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #ff416c, #ff4b2b, #1e90ff);
-    filter: blur(12px);
-    opacity: 0.9;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    z-index: -1;
-  }
-  
-  .social-link:hover:before {
-    transform: scale(1.5);
-    opacity: 1;
-  }
-  
-  .social-link i {
-    transition: color 0.4s ease-in-out;
-  }
-  
-  /* Tooltip styling */
-  .social-link span {
-    position: absolute;
-    bottom: -30px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    opacity: 0;
-    transition: opacity 0.3s, bottom 0.3s;
-    pointer-events: none;
-  }
-  
-  .social-link:hover span {
-    opacity: 1;
-    bottom: -40px;
-  }
-  
-  /* Hover Color Changes */
-  .social-link.facebook:hover i {
-    color: #1877f2;
-  }
-  
-  .social-link.instagram:hover i {
-    color: #e1306c;
-  }
-  
-  .social-link.linkedin:hover i {
-    color: #0077b5;
-  }
-  
-  .social-link.youtube:hover i {
-    color: #ff0000;
-  }
-  
-  .social-link.whatsapp:hover i {
-    color: #25d366;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b, #1e90ff);
+  font-family: "Poppins", sans-serif;
+}
 
-  .youtube-link {
-    margin-top: 60px;
-    text-align: center;
-    font-size: 1rem;
-    color: white;
-  }
-  
-  .youtube-link a {
-    color: #ff0000; /* YouTube red color */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .youtube-link a:hover {
-    color: #fff;
-  }
-  
+.social-container {
+  display: flex;
+  gap: 30px;
+}
+
+.social-link {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #141e30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8),
+    0 0 50px rgba(255, 255, 255, 0.8);
+}
+
+.social-link:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b, #1e90ff);
+  filter: blur(12px);
+  opacity: 0.9;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.social-link:hover:before {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.social-link i {
+  transition: color 0.4s ease-in-out;
+}
+
+.social-link span {
+  position: absolute;
+  bottom: -30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s, bottom 0.3s;
+  pointer-events: none;
+}
+
+.social-link:hover span {
+  opacity: 1;
+  bottom: -40px;
+}
+
+.social-link.facebook:hover i {
+  color: #1877f2;
+}
+
+.social-link.instagram:hover i {
+  color: #e1306c;
+}
+
+.social-link.linkedin:hover i {
+  color: #0077b5;
+}
+
+.social-link.youtube:hover i {
+  color: #ff0000;
+}
+
+.social-link.whatsapp:hover i {
+  color: #25d366;
+}
+
+
+
+
+.youtube-link {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 1rem;
+  color: black;
+}
+
+.youtube-link a {
+  color: #ff0000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.youtube-link a:hover {
+  color: #fff;
+}
