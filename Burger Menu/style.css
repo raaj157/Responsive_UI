@@ -1,0 +1,95 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a8e6ff, #ffdfd3);
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.burger-container {
+  display: flex;
+  gap: 50px;
+  padding: 20px;
+}
+
+.burger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.burger:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.burger-bar,
+.dot {
+  background-color: #333;
+  transition: all 0.4s ease;
+}
+
+/* Sliding Bars Menu */
+.sliding-bars .burger-bar {
+  width: 30px;
+  height: 4px;
+  margin: 4px 0;
+}
+.sliding-bars:hover .burger-bar:nth-child(1) {
+  transform: translateX(-10px);
+}
+.sliding-bars:hover .burger-bar:nth-child(2) {
+  transform: translateX(10px);
+}
+.sliding-bars:hover .burger-bar:nth-child(3) {
+  transform: translateX(-10px);
+}
+
+/* Rotating Dots Menu */
+.rotating-dots {
+  width: 30px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.rotating-dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin: 6px 0;
+}
+.rotating-dots:hover .dot:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+.rotating-dots:hover .dot:nth-child(2) {
+  transform: scale(1.5);
+}
+.rotating-dots:hover .dot:nth-child(3) {
+  transform: rotate(-45deg) translate(-10px, -10px);
+}
+
+/* Morphing Line to Arrow */
+.morphing-arrow .burger-bar {
+  width: 30px;
+  height: 4px;
+  margin: 4px 0;
+}
+.morphing-arrow:hover .burger-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.morphing-arrow:hover .burger-bar:nth-child(2) {
+  opacity: 0;
+}
+.morphing-arrow:hover .burger-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
