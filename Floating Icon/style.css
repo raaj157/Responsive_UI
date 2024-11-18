@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle, #1a2a6c, #b21f1f, #fdbb2d);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.floating-icons {
+  display: flex;
+  gap: 25px;
+}
+
+.icon {
+  font-size: 3rem;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  box-shadow: 0 0 15px rgba(255, 118, 137, 0.8),
+    0 0 30px rgba(255, 118, 137, 0.5);
+  animation: float 4s infinite ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect */
+.icon:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 0.8);
+  background: linear-gradient(135deg, #42e695, #3bb2b8);
+}
+
+/* Add animation delays for individual icons */
+.icon1 {
+  animation-delay: 0s;
+}
+.icon2 {
+  animation-delay: 0.5s;
+}
+.icon3 {
+  animation-delay: 1s;
+}
+.icon4 {
+  animation-delay: 1.5s;
+}
+.icon5 {
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
+  }
+}
