@@ -79,24 +79,6 @@ body {
   opacity: 1;
 }
 
-.social-link span {
-  position: absolute;
-  bottom: -30px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  opacity: 0;
-  transition: opacity 0.3s, bottom 0.3s;
-  pointer-events: none;
-}
-
-.social-link:hover span {
-  opacity: 1;
-  bottom: -40px;
-}
-
 .social-link.facebook:hover i {
   color: #1877f2;
 }
