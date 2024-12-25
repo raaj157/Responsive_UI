@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background: #2c3e50; /* Simple dark background */
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.aurora-text {
+    font-size: 5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff7ec2, #ff57ab, #8e44ad, #3498db);
+    background-size: 400% 400%;
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: aurora-animation 6s ease infinite, glow 1.5s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes aurora-animation {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 100%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    75% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 60px rgba(255, 255, 255, 0.7), 0 0 100px rgba(255, 255, 255, 0.5);
+    }
+}
