@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    font-family: 'Poppins', sans-serif;
+}
+
+.profile-card {
+    position: relative;
+    width: 320px;
+    height: 420px;
+    background: linear-gradient(145deg, #ffeaa7, #ffcec6);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+        from 0deg,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.1)
+    );
+    z-index: 1;
+    animation: rotateBg 6s linear infinite;
+}
+
+.profile-card img {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 6px solid #12d8c7;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.profile-card h2 {
+    position: relative;
+    margin: 20px 0 8px;
+    font-size: 1.8rem;
+    color: #222;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.profile-card p {
+    position: relative;
+    color: #555;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 2;
+    margin: 0 15px;
+    line-height: 1.6;
+}
+
+.profile-card .social-icons {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+    z-index: 2;
+}
+
+.profile-card .social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(145deg, #ececec, #d4d4d4);
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #444;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.profile-card .social-icons a:hover {
+    background: linear-gradient(145deg, #ff758c, #ff7eb3);
+    color: white;
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 10px 20px rgba(255, 117, 140, 0.6);
+}
+
+@keyframes rotateBg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
