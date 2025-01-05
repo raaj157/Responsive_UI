@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Pricing Card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="pricing-container">
+      <div class="toggle">
+        <input type="radio" id="monthly" name="plan" checked />
+        <label for="monthly">Monthly</label>
+
+        <input type="radio" id="yearly" name="plan" />
+        <label for="yearly">Yearly</label>
+      </div>
+
+      <div class="pricing-plan active" id="monthly-plan">
+        <div class="price">$19<span>/month</span></div>
+        <ul class="features">
+          <li>Basic Features</li>
+          <li>Email Support</li>
+          <li>10GB Storage</li>
+        </ul>
+        <a href="#" class="cta">Get Started</a>
+      </div>
+
+      <div class="pricing-plan" id="yearly-plan">
+        <div class="price">$199<span>/year</span></div>
+        <ul class="features">
+          <li>All Features</li>
+          <li>Priority Support</li>
+          <li>Unlimited Storage</li>
+        </ul>
+        <a href="#" class="cta">Get Started</a>
+      </div>
+    </div>
+
+    <script>
+      const monthlyPlan = document.getElementById("monthly-plan");
+      const yearlyPlan = document.getElementById("yearly-plan");
+
+      document.getElementById("monthly").addEventListener("change", () => {
+        monthlyPlan.classList.add("active");
+        yearlyPlan.classList.remove("active");
+      });
+
+      document.getElementById("yearly").addEventListener("change", () => {
+        yearlyPlan.classList.add("active");
+        monthlyPlan.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
