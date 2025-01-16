@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="shorts-container">
+      <video class="video" src="video.mp4" autoplay muted loop></video>
+
+      <div class="overlay">
+        <div class="video-description">Check out this amazing video! 🎥✨</div>
+        <div class="actions">
+          <div class="like-button" id="likeButton">❤️</div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const likeButton = document.getElementById("likeButton");
+
+      likeButton.addEventListener("click", () => {
+        likeButton.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
