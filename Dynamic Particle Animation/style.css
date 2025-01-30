@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle, #0f0f3d, #000);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.message {
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+  }
+  100% {
+    text-shadow: 0 0 20px magenta, 0 0 40px magenta;
+  }
+}
