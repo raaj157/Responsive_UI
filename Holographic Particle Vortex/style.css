@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    overflow: hidden;
+    cursor: none;
+}
+
+#vortexCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.hologram-text {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    font-size: 8vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(45deg, #00ff88, #00a3ff, #ff00e4);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: hologram 3s ease infinite;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.hologram-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    z-index: -1;
+    filter: blur(20px);
+    background: linear-gradient(45deg, #00ff88, #00a3ff, #ff00e4);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@keyframes hologram {
+    0%, 100% {
+        transform: translateZ(0) rotateX(20deg) rotateY(10deg);
+        background-position: 0% 0%;
+    }
+    50% {
+        transform: translateZ(50px) rotateX(-20deg) rotateY(-10deg);
+        background-position: 100% 100%;
+    }
+}
