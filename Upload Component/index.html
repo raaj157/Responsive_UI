@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="upload-container">
+      <div class="upload-header">
+        <h1>Upload Your File</h1>
+        <p>Share your moments with the world</p>
+      </div>
+
+      <div class="drop-zone" id="dropZone">
+        <div class="upload-icon">📤</div>
+        <p>Drag & Drop your photo here<br />or click to select</p>
+        <input type="file" id="file-input" accept="image/*" />
+      </div>
+
+      <div class="preview-container" id="previewContainer">
+        <img id="image-preview" alt="Preview" />
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress" id="progressBar"></div>
+      </div>
+
+      <button class="upload-btn" id="uploadBtn">Upload</button>
+      <p class="success-message" id="successMessage">
+        🎉 Photo uploaded successfully!
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
