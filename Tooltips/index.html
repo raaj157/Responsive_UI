@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Tooltip Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="tooltip-container">
+        <!-- Top Tooltip -->
+        <div class="tooltip tooltip-top" tabindex="0">Hover me (Top)
+            <span class="tooltiptext">This tooltip appears on top!</span>
+        </div>
+
+        <!-- Right Tooltip -->
+        <div class="tooltip tooltip-right" tabindex="0">Hover me (Right)
+            <span class="tooltiptext">This tooltip appears on the right!</span>
+        </div>
+
+        <!-- Bottom Tooltip -->
+        <div class="tooltip tooltip-bottom" tabindex="0">Hover me (Bottom)
+            <span class="tooltiptext">This tooltip appears at the bottom!</span>
+        </div>
+
+        <!-- Left Tooltip -->
+        <div class="tooltip tooltip-left" tabindex="0">Hover me (Left)
+            <span class="tooltiptext">This tooltip appears on the left!</span>
+        </div>
+    </div>
+
+    <script>
+        // Enable tooltips to work on click for mobile devices
+        document.querySelectorAll(".tooltip").forEach((tooltip) => {
+            tooltip.addEventListener("click", function (e) {
+                e.stopPropagation();
+                document.querySelectorAll(".tooltip").forEach(t => t.classList.remove("active"));
+                this.classList.add("active");
+            });
+        });
+
+        // Close tooltips when clicking elsewhere
+        document.addEventListener("click", function () {
+            document.querySelectorAll(".tooltip").forEach(t => t.classList.remove("active"));
+        });
+    </script>
+
+</body>
+</html>
